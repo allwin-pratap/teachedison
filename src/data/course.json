@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Introduction to JavaScript",
+    "description": "Learn the basics of JavaScript.",
+    "duration": "3 hours"
+  },
+  {
+    "id": 2,
+    "title": "React for Beginners",
+    "description": "Build interactive UIs with React.",
+    "duration": "5 hours"
+  }
+]
