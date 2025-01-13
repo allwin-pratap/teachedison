@@ -1,72 +1,40 @@
-'use client';
 
-import Image from "next/image";
-import courses from '../data/course.json';
+import { RadialChart } from '@/components/Charts/RadialChart'
+import { AreaWeeklyChart } from '@/components/Charts/AreaWeeklyChart'
+import { CourseBarChart } from '@/components/Charts/CourseBarChart'
+import { UpcomingCourse } from '@/components/UpcomingCourse'
+import { MyCourse } from '@/components/MyCourse';
+import { NumberCards } from '@/components/NumberCards';
 
-export default function Home() {
+export const metadata = {
+  title: 'Student Dashboard',
+  description: 'Student Dashboard',
+};
+
+export default function Page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="flex flex-1 flex-col gap-4 p-4 max-w-[1280px] w-full mx-auto">
+      <div className="grid auto-rows-min gap-4 grid-cols-2 sm:grid-cols-4">
+        <NumberCards title={`Completed`} value={68} />
+        <NumberCards title={`To do`} value={32} />
+        <NumberCards title={`In Progress`} value={23} />
+        <NumberCards title={`On Hold`} value={10} />
+      </div>
+      <div className="grid auto-rows-min gap-4 grid-cols-1 sm:grid-cols-2">
         <div>
-          <h1 className="text-2xl mb-4">E-Learning Dashboard</h1>
-          <ul>
-            {courses.map((course) => (
-              <li key={course.id} className="mb-2">
-                <h2 className="text-xl">{course.title}</h2>
-                <p>{course.description}</p>
-                <p>Duration: {course.duration}</p>
-              </li>
-            ))}
-          </ul>
+          <RadialChart />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="">
+          <UpcomingCourse />
+        </div>
+      </div>
+      <div className="grid auto-rows-min gap-4 grid-cols-1 sm:grid-cols-2">
+        <CourseBarChart />
+        <AreaWeeklyChart />
+      </div>
+      <div className="grid auto-rows-min gap-4 grid-cols-1">
+        <MyCourse />
+      </div>
     </div>
-  );
+  )
 }

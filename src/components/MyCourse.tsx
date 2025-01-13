@@ -64,7 +64,7 @@ export function MyCourse() {
         <CardTitle>My Course</CardTitle>
       </CardHeader>
       <CardContent className="pb-0">
-        <div className="grid w-full items-center gap-4 overflow-y-scroll specific-element">
+        <div className="grid w-full items-center gap-4">
           {upcoming.map((item, index) => (
             <div key={index} className="flex justify-between last:mb-[10px]">
               <div className="flex items-start">

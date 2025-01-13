@@ -7,8 +7,8 @@ import { MyCourse } from '@/components/MyCourse';
 import { NumberCards } from '@/components/NumberCards';
 
 export const metadata = {
-  title: 'Student Dashboard',
-  description: 'Student Dashboard',
+  title: 'Admin Dashboard',
+  description: 'Admin Dashboard',
 };
 
 export default function Page() {
