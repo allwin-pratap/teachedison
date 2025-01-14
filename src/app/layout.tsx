@@ -1,7 +1,7 @@
 'use client';
 
 import { Outfit } from 'next/font/google';
-import { useThemeStore } from '../store/themestore';
+import { useThemeStore } from '@/store/themestore';
 import ThemeToggle from '../components/ThemeToggle';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 import { Separator } from '@/components/ui/separator';
@@ -89,7 +89,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <div className="flex items-center gap-2 px-4">
                 <SidebarTrigger className="-ml-1" />
                 <Separator orientation="vertical" className="mr-2 h-4 bg-[#e5e7eb]" />
-                <p>Student Dashboard</p>
+                <p>Dashboard</p>
               </div>
               <div className="flex items-center gap-2 mr-4">
                 <ThemeToggle />

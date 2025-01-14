@@ -1,0 +1,440 @@
+{
+  "admin": {
+    "dashboard": {
+      "allList": [
+        {
+          "title": "Total Users",
+          "value": 68
+        },
+        {
+          "title": "Instructors",
+          "value": 10
+        },
+        {
+          "title": "Students",
+          "value": 30
+        },
+        {
+          "title": "Course",
+          "value": 14
+        }
+      ],
+      "averageScore": {
+        "score": 78
+      },
+      "courseAnalytics": {
+        "completed": 35,
+        "toDo": 10,
+        "progress": 25,
+        "hold": 12
+      },
+      "weeklyReport": [
+        {
+          "week": "Jan 1 - Jan 7",
+          "percentage": 2
+        },
+        {
+          "week": "Jan 8 - Jan 14",
+          "percentage": 40
+        },
+        {
+          "week": "Jan 22 - Jan 28",
+          "percentage": 100
+        },
+        {
+          "week": "Jan 29 - Feb 4",
+          "percentage": 0
+        },
+        {
+          "week": "Feb 5 - Feb 11",
+          "percentage": 60
+        },
+        {
+          "week": "Feb 12 - Feb 18",
+          "percentage": 50
+        }
+      ],
+      "upcoming": [
+        {
+          "title": "Course DSA",
+          "type": "Bussiness Management",
+          "tag": "in live",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course2",
+          "type": "Management",
+          "tag": "",
+          "icon": "/assets/img/lamp-on.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course2",
+          "type": "Management",
+          "tag": "",
+          "icon": "/assets/img/lamp-on.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course1",
+          "type": "Bussiness Management",
+          "tag": "in live",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        }
+      ],
+      "myCourse": [
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        }
+      ]
+    },
+    "allStudents": [
+      {
+        "name": "Student 1",
+        "email": "student1@example.com",
+        "coursesEnrolled": 3
+      },
+      {
+        "name": "Student 2",
+        "email": "student2@example.com",
+        "coursesEnrolled": 5
+      }
+    ],
+    "allInstructors": [
+      {
+        "name": "Instructor 1",
+        "email": "instructor1@example.com",
+        "coursesCreated": 2
+      },
+      {
+        "name": "Instructor 2",
+        "email": "instructor2@example.com",
+        "coursesCreated": 4
+      }
+    ]
+  },
+  "student": {
+    "dashboard": {
+      "allList": [
+        {
+          "title": "Completed",
+          "value": 68
+        },
+        {
+          "title": "In Progress",
+          "value": 10
+        },
+        {
+          "title": "To Do",
+          "value": 30
+        },
+        {
+          "title": "On Hold",
+          "value": 14
+        }
+      ],
+      "averageScore": {
+        "score": 78
+      },
+      "courseAnalytics": {
+        "completed": 35,
+        "toDo": 10,
+        "progress": 25,
+        "hold": 12
+      },
+      "weeklyReport": [
+        {
+          "week": "Jan 1 - Jan 7",
+          "percentage": 2
+        },
+        {
+          "week": "Jan 8 - Jan 14",
+          "percentage": 40
+        },
+        {
+          "week": "Jan 22 - Jan 28",
+          "percentage": 100
+        },
+        {
+          "week": "Jan 29 - Feb 4",
+          "percentage": 0
+        },
+        {
+          "week": "Feb 5 - Feb 11",
+          "percentage": 60
+        },
+        {
+          "week": "Feb 12 - Feb 18",
+          "percentage": 50
+        }
+      ],
+      "upcoming": [
+        {
+          "title": "Course DSA",
+          "type": "Bussiness Management",
+          "tag": "in live",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course2",
+          "type": "Management",
+          "tag": "",
+          "icon": "/assets/img/lamp-on.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course2",
+          "type": "Management",
+          "tag": "",
+          "icon": "/assets/img/lamp-on.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course1",
+          "type": "Bussiness Management",
+          "tag": "in live",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        }
+      ],
+      "myCourse": [
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        }
+      ]
+    }
+  },
+  "instructor": {
+    "dashboard": {
+      "allList": [
+        {
+          "title": "Total Batch",
+          "value": 3
+        },
+        {
+          "title": "Total Students",
+          "value": 70
+        },
+        {
+          "title": "Students Placed",
+          "value": 59
+        },
+        {
+          "title": "Courses",
+          "value": 7
+        }
+      ],
+      "weeklyReport": [
+        {
+          "week": "Jan 1 - Jan 7",
+          "percentage": 2
+        },
+        {
+          "week": "Jan 8 - Jan 14",
+          "percentage": 40
+        },
+        {
+          "week": "Jan 22 - Jan 28",
+          "percentage": 100
+        },
+        {
+          "week": "Jan 29 - Feb 4",
+          "percentage": 0
+        },
+        {
+          "week": "Feb 5 - Feb 11",
+          "percentage": 60
+        },
+        {
+          "week": "Feb 12 - Feb 18",
+          "percentage": 50
+        }
+      ],
+      "upcoming": [
+        {
+          "title": "Course DSA",
+          "type": "Bussiness Management",
+          "tag": "in live",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course2",
+          "type": "Management",
+          "tag": "",
+          "icon": "/assets/img/lamp-on.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course2",
+          "type": "Management",
+          "tag": "",
+          "icon": "/assets/img/lamp-on.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        },
+        {
+          "title": "Course1",
+          "type": "Bussiness Management",
+          "tag": "in live",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Register",
+          "btn_url": "/"
+        }
+      ],
+      "myCourse": [
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        },
+        {
+          "title": "DSA",
+          "type": "Computer science",
+          "tag": "in progress",
+          "duration": "3hrs",
+          "date": "12-01-2025",
+          "icon": "/assets/img/monitor-recorder.png",
+          "icon_alt": "live",
+          "btn": "Join",
+          "btn_url": "/"
+        }
+      ]
+    }
+  }
+}

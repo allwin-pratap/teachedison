@@ -24,8 +24,8 @@ export function MainLogo({
           size="lg"
           className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
         >
-          <div className="max-w-[135px]">
-            <Image src={logo.url} width={230} height={50} alt={logo.alt} />
+          <div className="max-w-[135px] dark:invert">
+            <Image src={logo.url} width={230} height={50} priority={true} alt={logo.alt} />
           </div>
         </SidebarMenuButton>
       </SidebarMenuItem>

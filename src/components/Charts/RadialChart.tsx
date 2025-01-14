@@ -15,9 +15,6 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { ChartConfig, ChartContainer } from "@/components/ui/chart"
-const chartData = [
-    { browser: "safari", percentage: 68, fill: "var(--color-safari)" },
-]
 
 const chartConfig = {
     percentage: {
@@ -29,12 +26,15 @@ const chartConfig = {
     },
 } satisfies ChartConfig
 
-export function RadialChart() {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function RadialChart(props: { score: any }) {
+    const chartData = [
+        { browser: "safari", percentage: props?.score, fill: "var(--color-safari)" },
+    ]
     return (
         <Card className="flex flex-col h-full">
             <CardHeader className="items-center pb-0">
                 <CardTitle>Average Score</CardTitle>
-                {/* <CardDescription>Average Score opmtine </CardDescription> */}
             </CardHeader>
             <CardContent className="flex-1 pb-0">
                 <ChartContainer
@@ -44,7 +44,7 @@ export function RadialChart() {
                     <RadialBarChart
                         data={chartData}
                         startAngle={0}
-                        endAngle={chartData[0].percentage *3.6}
+                        endAngle={chartData[0].percentage * 3.6}
                         innerRadius={80}
                         outerRadius={110}
                     >

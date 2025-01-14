@@ -10,54 +10,30 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
-const upcoming = [
-  {
-    title: "Course1",
-    type: "Bussiness Management",
-    tag: "in live",
-    icon: "/assets/img/monitor-recorder.png",
-    icon_alt: "live",
-    btn: "Register",
-    btn_url: "/"
-  },
-  {
-    title: "Course2",
-    type: "Management",
-    tag: "",
-    icon: "/assets/img/lamp-on.png",
-    icon_alt: "live",
-    btn: "Register",
-    btn_url: "/"
-  },
-  {
-    title: "Course2",
-    type: "Management",
-    tag: "",
-    icon: "/assets/img/lamp-on.png",
-    icon_alt: "live",
-    btn: "Register",
-    btn_url: "/"
-  },
-  {
-    title: "Course1",
-    type: "Bussiness Management",
-    tag: "in live",
-    icon: "/assets/img/monitor-recorder.png",
-    icon_alt: "live",
-    btn: "Register",
-    btn_url: "/"
-  },
-]
+type UpcomingItem = {
+  title: string;
+  type: string;
+  tag: string;
+  icon: string;
+  icon_alt: string;
+  btn: string;
+  btn_url: string;
+};
 
-export function UpcomingCourse() {
+type UpComingProps = {
+  upcoming?: UpcomingItem[];
+  title?: string;
+};
+
+export function UpcomingCourse({ title, upcoming }: UpComingProps) {
   return (
     <Card className="">
       <CardHeader>
-        <CardTitle>Upcoming Course</CardTitle>
+        <CardTitle>{title ?? 'Upcoming'}</CardTitle>
       </CardHeader>
       <CardContent className="pb-0">
         <div className="grid w-full items-center gap-4 min-h-[225px] max-h-[225px] overflow-y-scroll hide-scroll">
-          {upcoming.map((item, index) => (
+          {upcoming?.map((item, index) => (
             <div key={index} className="flex justify-between md:flex-col lg:flex-row last:mb-[10px]">
               <div className="flex items-start">
                 <div className="rounded-[5px] bg-[#F7F7F5] p-[10px]">
