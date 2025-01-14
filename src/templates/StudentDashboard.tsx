@@ -10,7 +10,7 @@ export default function StudentDashboard({ data }: any) {
     return (
         <div className="flex flex-1 flex-col gap-4 p-4 max-w-[1280px] w-full mx-auto">
             {/* Displaying number cards */}
-            <div className="grid auto-rows-min gap-4 grid-cols-2 sm:grid-cols-4">
+            <div className="grid gap-4 grid-cols-2 sm:grid-cols-4">
                 {data?.allList?.map((list: { title: string; value: number }, index: number) => (
                     <NumberCards key={index} title={list.title} value={list.value ?? 0} />
                 ))}
@@ -18,7 +18,7 @@ export default function StudentDashboard({ data }: any) {
 
 
             {/* RadialChart and Upcoming Course */}
-            <div className="grid auto-rows-min gap-4 grid-cols-1 sm:grid-cols-2">
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
                 <div>
                     <RadialChart score={data?.averageScore?.score ?? 0} />
                 </div>
@@ -28,13 +28,13 @@ export default function StudentDashboard({ data }: any) {
             </div>
 
             {/* Course Bar Chart and Weekly Area Chart */}
-            <div className="grid auto-rows-min gap-4 grid-cols-1 sm:grid-cols-2">
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
                 <CourseBarChart courseAnalytics={data?.courseAnalytics} />
                 <AreaWeeklyChart weeklyReport={data?.weeklyReport} />
             </div>
 
             {/* My Course Section */}
-            <div className="grid auto-rows-min gap-4 grid-cols-1">
+            <div className="grid gap-4 grid-cols-1">
                 <MyCourse title={'My Course'} myCourse={data?.myCourse} />
             </div>
         </div>
