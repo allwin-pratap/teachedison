@@ -31,7 +31,7 @@ export function UpcomingCourse({ title, upcoming }: UpComingProps) {
       <CardHeader>
         <CardTitle>{title ?? 'Upcoming'}</CardTitle>
       </CardHeader>
-      <CardContent className="pb-0">
+      <CardContent className="p-3 sm:p-6 pb-0">
         <div className="grid w-full items-center gap-4 min-h-[225px] max-h-[225px] overflow-y-scroll hide-scroll">
           {upcoming?.map((item, index) => (
             <div key={index} className="flex justify-between md:flex-col lg:flex-row last:mb-[10px]">

@@ -43,7 +43,7 @@ export function MyCourse({ title, myCourse }: MyCourseProps) {
                 </div>
                 <div className="pl-[10px]">
                   <p>{item.title}</p>
-                  <div className="flex gap-[5px]">
+                  <div className="flex gap-[5px] flex-wrap">
                     <p className="flex gap-[5px] items-center">
                       <svg width="16" height="16" className="dark:invert" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.6666 11.16V3.1133C14.6666 2.3133 14.0133 1.71996 13.22 1.78663H13.18C11.78 1.90663 9.65331 2.61996 8.46665 3.36663L8.35331 3.43996C8.15998 3.55996 7.83998 3.55996 7.64665 3.43996L7.47998 3.33996C6.29331 2.59996 4.17331 1.8933 2.77331 1.77996C1.97998 1.7133 1.33331 2.3133 1.33331 3.10663V11.16C1.33331 11.8 1.85331 12.4 2.49331 12.48L2.68665 12.5066C4.13331 12.7 6.36665 13.4333 7.64665 14.1333L7.67331 14.1466C7.85331 14.2466 8.13998 14.2466 8.31331 14.1466C9.59331 13.44 11.8333 12.7 13.2866 12.5066L13.5066 12.48C14.1466 12.4 14.6666 11.8 14.6666 11.16Z" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
