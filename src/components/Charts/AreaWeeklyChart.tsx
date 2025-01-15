@@ -5,7 +5,6 @@ import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 import {
     Card,
     CardContent,
-    CardDescription,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
@@ -36,9 +35,6 @@ export function AreaWeeklyChart({ weeklyReport }: WeeklyReportProps) {
         <Card>
             <CardHeader>
                 <CardTitle>Weekly Progress</CardTitle>
-                <CardDescription>
-                    Showing overall progress of the course
-                </CardDescription>
             </CardHeader>
             <CardContent>
                 <ChartContainer

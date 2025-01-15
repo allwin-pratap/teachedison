@@ -6,7 +6,6 @@ import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
@@ -141,9 +140,6 @@ export function BarInteractiveChart() {
       <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
           <CardTitle>Student Onboard & Got Placed</CardTitle>
-          <CardDescription>
-            Showing total Students for the last 3 months
-          </CardDescription>
         </div>
         <div className="flex">
           {["student", "placed"].map((key) => {

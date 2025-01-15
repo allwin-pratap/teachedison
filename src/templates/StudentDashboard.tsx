@@ -18,11 +18,11 @@ export default function StudentDashboard({ data }: any) {
 
 
             {/* RadialChart and Upcoming Course */}
-            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
-                <div>
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
+                <div className='md:col-span-2'>
                     <RadialChart score={data?.averageScore?.score ?? 0} />
                 </div>
-                <div>
+                <div className='md:col-span-3'>
                     <UpcomingCourse title={'Upcoming Course'} upcoming={data?.upcoming} />
                 </div>
             </div>

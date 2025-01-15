@@ -21,7 +21,7 @@ const chartConfig = {
         label: "Score",
     },
     safari: {
-        label: "Safari",
+        label: "Score",
         color: "hsl(var(--chart-2))",
     },
 } satisfies ChartConfig
@@ -36,10 +36,10 @@ export function RadialChart(props: { score: any }) {
             <CardHeader className="items-center pb-0">
                 <CardTitle>Average Score</CardTitle>
             </CardHeader>
-            <CardContent className="flex-1 pb-0">
+            <CardContent className="flex-1 pt-0 pb-0">
                 <ChartContainer
                     config={chartConfig}
-                    className="mx-auto aspect-square max-h-[250px]"
+                    className="mx-auto aspect-square max-h-[230px]"
                 >
                     <RadialBarChart
                         data={chartData}
@@ -90,14 +90,6 @@ export function RadialChart(props: { score: any }) {
                     </RadialBarChart>
                 </ChartContainer>
             </CardContent>
-            {/* <CardFooter className="flex-col gap-2 text-sm">
-                <div className="flex items-center gap-2 font-medium leading-none">
-                    Increased by 5.2% this month <TrendingUp className="h-4 w-4" />
-                </div>
-                <div className="leading-none text-muted-foreground">
-                    Showing total percentage for the last 6 months
-                </div>
-            </CardFooter> */}
         </Card>
     )
 }
