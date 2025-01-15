@@ -67,7 +67,7 @@ export default function RoleDashboard({ data }: { data: DashboardData }) {
                 ) : role === 'admin' ? (
                     <AdminDashboard data={data?.admin?.dashboard} />
                 ) : (
-                    <div className="p-[200px]">No role selected</div>
+                    <div className="p-[50px] md:p-[200px]">No role selected</div>
                 )
             }
         </>
