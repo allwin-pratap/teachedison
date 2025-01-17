@@ -41,7 +41,6 @@ export default function FormDialog({ type, id }: FormDialogProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSave = () => {
-    console.log(type)
     if (type === "add") {
       addUser({ id: Date.now().toString(), ...formData });
     } else if (type === "edit" && id) {
