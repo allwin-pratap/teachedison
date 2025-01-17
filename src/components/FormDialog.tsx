@@ -104,14 +104,14 @@ export default function FormDialog({ type, id }: FormDialogProps) {
               <Label className="text-right">
                 Role
               </Label>
-              <Select>
+              <Select value={formData.role}>
                 <SelectTrigger className="w-full col-span-3">
                   <SelectValue placeholder="Select a Role" />
                 </SelectTrigger>
                 <SelectContent className="bg-white dark:bg-gray-900">
                   <SelectGroup>
-                    <SelectItem value="student">Student</SelectItem>
-                    <SelectItem value="instructor">Instructor</SelectItem>
+                    <SelectItem value="Student">Student</SelectItem>
+                    <SelectItem value="Instructor">Instructor</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
