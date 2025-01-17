@@ -75,11 +75,7 @@ project-directory/
 │   ├── data/
 │   │   └── dashboard.json        # JSON Data
 │   └── store/
-│       ├── themestore.tsx     # Zustand store for Theme management
-│       └── useRoleStore.tsx     # Zustand store for role management
-│   └── store/
-│       ├── themestore.tsx     # Zustand store for Theme management
-│       └── useRoleStore.tsx     # Zustand store for role management
+│   │   └── themestore.tsx     # Zustand store for Theme management
 │   └── templates/             # Templates for Role Dashboard
 └── README.md                # Documentation
 ```

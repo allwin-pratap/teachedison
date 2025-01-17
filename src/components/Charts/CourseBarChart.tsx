@@ -70,6 +70,8 @@ export function CourseBarChart({ courseAnalytics }: CourseAnalticsProps) {
               left: 0,
             }}
           >
+            
+            <XAxis type="number" />
             <YAxis
               dataKey="browser"
               type="category"

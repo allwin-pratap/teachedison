@@ -1,13 +1,19 @@
-import RoleDashboard from "@/templates/RoleDashboard";
-import data from '../data/dashboard.json';
+"use client";
 
-export const metadata = {
-  title: 'Dashboard',
-  description: 'Dashboard',
-};
+import { useRouter, usePathname } from "next/navigation";
+import { useEffect } from "react";
 
-export default async function Page() {
+export default function Page() {
 
-  return <RoleDashboard data={data} />;
-  
+  const router = useRouter();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    // Redirect only if the current path is the root
+    if (pathname === "/") {
+      router.push("/student");
+    }
+  }, [pathname, router]);
+
+  return null; // No UI needed
 }

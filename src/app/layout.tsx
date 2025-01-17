@@ -74,11 +74,40 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   // Apply theme class to the <html> element
   useEffect(() => {
-    document.documentElement.className = theme === 'dark' ? 'dark' : '';
+    document.documentElement.className = theme === 'dark' ? 'dark' : 'light';
   }, [theme]);
 
+  const getInitialTheme = () => {
+    if (typeof window === "undefined") {
+      // Server-side: Default to light theme
+      return "light";
+    }
+
+    // Client-side: Check localStorage or system preference
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return storedTheme || (prefersDark ? "dark" : "light");
+  };
+
+  // Apply the initial theme dynamically
+  const initialTheme = getInitialTheme();
+
   return (
-    <html lang="en" className={theme === 'dark' ? 'dark' : ''}>
+    <html lang="en" className={initialTheme} suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const storedTheme = localStorage.getItem('theme');
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const theme = storedTheme || (prefersDark ? 'dark' : 'light');
+                document.documentElement.className = theme;
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${outfit.className} bg-white dark:bg-gray-900 text-black dark:text-white`}
       >

@@ -1,6 +1,6 @@
 "use client";
 
-import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
+import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import {
     Card,
@@ -51,6 +51,7 @@ export function AreaWeeklyChart({ weeklyReport }: WeeklyReportProps) {
                         }}
                     >
                         <CartesianGrid vertical={false} />
+                        <YAxis type="number" />
                         <XAxis
                             dataKey="week"
                             tickLine={false}

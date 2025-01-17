@@ -52,7 +52,7 @@ type ProgressChartProps = {
 
 const ProgressChart: React.FC<ProgressChartProps> = ({ percentage }) => {
   const chartData = [
-    { browser: "safari", percentage: 70, fill: "var(--color-safari)" },
+    { browser: "safari", percentage: percentage, fill: "var(--color-safari)" },
   ]
   return (
     <RadialBarChart

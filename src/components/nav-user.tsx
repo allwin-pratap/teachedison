@@ -15,7 +15,9 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { useRoleStore } from "@/store/useRoleStore"  // Import the zustand store
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react"
 
 export function NavUser({
   user,
@@ -28,11 +30,29 @@ export function NavUser({
 }) {
   const { isMobile } = useSidebar()
 
-  const { role, setRole } = useRoleStore()  // Access the current role and setRole function from zustand
+  const router = useRouter();
 
-  const handleRoleChange = (newRole: "admin" | "student" | "instructor") => {
-    setRole(newRole) // Update the role in zustand
+  const handleRoleChange = (newRole: "student" | "admin" | "instructor") => {
+    router.push(`/${newRole}`);
   }
+
+  // const [role, setRole] = useState<string>(""); // Default role
+  const pathname = usePathname(); // Safely get the current route
+  // Update the role dynamically based on the current route
+  const [role, setRole] = useState<string>(() => {
+    const slug = pathname.split("/")[1];
+    if (slug === "admin") return "Admin";
+    if (slug === "instructor") return "Instructor";
+    if (slug === "student") return "Student";
+    return ""; // Default value if no match
+  });
+
+  useEffect(() => {
+    const slug = pathname.split("/")[1];
+    if (slug === "admin") setRole("Admin");
+    else if (slug === "instructor") setRole("Instructor");
+    else if (slug === "student") setRole("Student");
+  }, [pathname]);
 
   return (
     <SidebarMenu>
@@ -43,44 +63,14 @@ export function NavUser({
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
-              {
-                role === 'student' ? (
-                  <>
-                    <Avatar className="h-8 w-8 rounded-lg">
-                      <AvatarImage src={user.avatar} alt={user.name} />
-                      <AvatarFallback className="rounded-lg">AP</AvatarFallback>
-                    </Avatar>
-                    <div className="grid flex-1 text-left text-sm leading-tight">
-                      <span className="truncate font-semibold">Allwin Pratap</span>
-                      <span className="truncate text-xs">Student</span>
-                    </div>
-                  </>
-                ) : role === 'instructor' ? (
-                  <>
-                    <Avatar className="h-8 w-8 rounded-lg">
-                      <AvatarImage src={user.avatar} alt={user.name} />
-                      <AvatarFallback className="rounded-lg">TP</AvatarFallback>
-                    </Avatar>
-                    <div className="grid flex-1 text-left text-sm leading-tight">
-                      <span className="truncate font-semibold">Tom Pratap</span>
-                      <span className="truncate text-xs">Instructor</span>
-                    </div>
-                  </>
-                ) : role === 'admin' ? (
-                  <>
-                    <Avatar className="h-8 w-8 rounded-lg">
-                      <AvatarImage src={user.avatar} alt={user.name} />
-                      <AvatarFallback className="rounded-lg">AD</AvatarFallback>
-                    </Avatar>
-                    <div className="grid flex-1 text-left text-sm leading-tight">
-                      <span className="truncate font-semibold">Admin</span>
-                      <span className="truncate text-xs">Admin</span>
-                    </div>
-                  </>
-                ) : (
-                  <div>No role selected</div>
-                )
-              }
+              <Avatar className="h-8 w-8 rounded-lg">
+                <AvatarImage src={user.avatar} alt={user.name} />
+                <AvatarFallback className="rounded-lg">SR</AvatarFallback>
+              </Avatar>
+              <div className="grid flex-1 text-left text-sm leading-tight">
+                <span className="truncate font-semibold">Switch Role</span>
+                <span className="truncate text-xs">{role}</span>
+              </div>
               <ChevronsUpDown className="ml-auto size-4" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
@@ -90,27 +80,14 @@ export function NavUser({
             align="end"
             sideOffset={4}
           >
-            {/* <DropdownMenuLabel className="p-0 font-normal">
-              <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
-                <Avatar className="h-8 w-8 rounded-lg">
-                  <AvatarImage src={user.avatar} alt={user.name} />
-                  <AvatarFallback className="rounded-lg">AP</AvatarFallback>
-                </Avatar>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">{user.name}</span>
-                  <span className="truncate text-xs">{user.email}</span>
-                </div>
-              </div>
-            </DropdownMenuLabel>
-            <DropdownMenuSeparator /> */}
             <DropdownMenuItem className="cursor-pointer" onClick={() => handleRoleChange("student")}>
               <Sparkles />
-              Students
+              Student
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="cursor-pointer" onClick={() => handleRoleChange("instructor")}>
               <Sparkles />
-              Instructors
+              Instructor
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem className="cursor-pointer" onClick={() => handleRoleChange("admin")}>

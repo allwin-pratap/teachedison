@@ -1,10 +1,7 @@
-// import { RadialChart } from '@/components/Charts/RadialChart'
-// import { AreaWeeklyChart } from '@/components/Charts/AreaWeeklyChart'
-// import { CourseBarChart } from '@/components/Charts/CourseBarChart'
-// import { UpcomingCourse } from '@/components/UpcomingCourse'
-// import { MyCourse } from '@/components/MyCourse';
 import { NumberCards } from '@/components/NumberCards';
 import { BarInteractiveChart } from '@/components/Charts/BarInteractiveChart'
+import ManageUsers from '@/components/Tables/ManageUsers';
+import { UserManage } from '@/components/Tables/UserManage';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function AdminDashboard({ data }: any) {
@@ -18,6 +15,12 @@ export default function AdminDashboard({ data }: any) {
             </div>
             <div className="grid">
                 <BarInteractiveChart />
+            </div>
+            <div className="grid">
+                <ManageUsers />
+            </div>
+            <div className="grid">
+                <UserManage />
             </div>
         </div>
     );
