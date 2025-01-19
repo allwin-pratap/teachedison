@@ -31,11 +31,19 @@ export default function FormDialog({ type, id }: FormDialogProps) {
   const { addUser, updateUser, deleteUser, users } = useUserStore();
   const existingUser = users.find((user) => user.id === id);
 
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: existingUser?.name || "",
     email: existingUser?.email || "",
     role: existingUser?.role || "Student",
-  });
+  };
+  const [formData, setFormData] = useState(initialFormData);
+
+  const handleRoleChange = (value: string) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      role: value,
+    }));
+  };
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +56,7 @@ export default function FormDialog({ type, id }: FormDialogProps) {
     } else if (type === "delete" && id) {
       deleteUser(id)
     }
+    setFormData(initialFormData);
     setIsOpen(false);
   };
 
@@ -104,9 +113,9 @@ export default function FormDialog({ type, id }: FormDialogProps) {
               <Label className="text-right">
                 Role
               </Label>
-              <Select value={formData.role}>
+              <Select value={formData.role} onValueChange={handleRoleChange}>
                 <SelectTrigger className="w-full col-span-3">
-                  <SelectValue placeholder="Select a Role" />
+                  <SelectValue placeholder="" />
                 </SelectTrigger>
                 <SelectContent className="bg-white dark:bg-gray-900">
                   <SelectGroup>
